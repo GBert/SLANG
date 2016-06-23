@@ -43,7 +43,7 @@ int recv_w_ts(int sock, int flags, /*@out@*/ pkt_t *pkt) {
 	struct msghdr msg[1];
 	struct iovec iov[1];
 	struct {
-		struct cmsghdr cm;
+		struct cmsghdr *cm;
 		char control[512];
 	} control;
 
